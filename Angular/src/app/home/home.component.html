@@ -1,0 +1,18 @@
+<div *ngIf="identityClaims" style="align-content:center">
+  <h2>Hey, {{ identityClaims['name'] }}!</h2>
+<br>
+  <table class="table table-bordered">
+    <tr>
+      <th>Claim</th>
+      <th>Value</th>
+    </tr>
+      <tr *ngFor="let claim of identityClaims | keyvalue">
+        <td><b>{{ claim.key }}</b></td>
+        <td>{{ claim.value }}</td>
+      </tr>
+  </table>
+</div>
+
+<div *ngIf="!identityClaims">
+  <h1>Hey :)</h1>
+</div>

@@ -1,0 +1,221 @@
+/* import cognizant softvision official font */
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+    font-family: Proxima Nova Bold;
+    src: url(../fonts/ProximaNova-Bold.otf);
+    font-weight: bold;
+}
+
+/* body */
+
+body {
+    background-image: url('../img/1_SS.svg'), url('../img/Waves.svg');
+    background-blend-mode: normal, soft-light;
+    background-color: #F2F2F2;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-family: Proxima Nova;
+    margin: 0px;
+}
+
+/* title banner size and colour */
+.sv-header {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../img/cv2.png');
+    background-position: 0 0;
+    background-size: 400px;
+    background-repeat: no-repeat;
+}
+
+.sv-header-wrapper {
+    display: none;
+} 
+
+h1#kc-page-title {
+    font-size: 0px;
+    /* hide login text for now */
+}
+
+/* form */
+.sv-logo-container {
+    text-align: center;
+}
+
+.sv-logo {
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+}
+
+@media(min-width: 500px) {
+    /* hide logo on big screen */
+    .sv-logo-container {
+        display: none;
+    }
+}
+
+div#kc-content-wrapper {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #F2F2F2;
+    height: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+@media(min-width: 500px) {
+    div#kc-content-wrapper {
+        width: 33%;
+    }
+}
+
+/* labels */
+
+label {
+    color: black;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 7px;
+}
+
+/* inputs */
+
+input[type=text], input[type=password] {
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 2px;
+    padding: 12px 12px;
+    width: 100%;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    outline: none;
+}
+
+/* submit button*/
+
+input[type=submit] {
+    border: none;
+    border-radius: 3px;
+    background-color: #C800A1;
+    color: white;
+    padding: 20px;
+    width: 100%;
+    font-family: Proxima Nova Bold;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .1px;
+}
+
+div#kc-form-buttons {
+    margin: 0px;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(40, 52, 147, 0.7);
+}
+
+/* form settings */
+
+.sv-form-settings {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.sv-form-settings-link {
+    margin-bottom: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* info */
+
+.sv-info-wrapper {
+    text-align: center;
+    margin-bottom: 20px;
+    color: lightslategrey;
+}
+
+/* alerts */
+
+.alert {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.alert-error {
+    color: red;
+}
+
+/* instructions */
+
+.instruction {
+    text-align: center;
+}
+
+/* social (google)*/
+
+div#kc-social-providers::before {
+    content: '\2014  or  \2014';
+}
+
+div#kc-social-providers {
+    text-align: center;
+    margin-top: 1em;
+}
+
+div#kc-social-providers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.zocial.google {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 100%;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.zocial.google:hover {
+    cursor: pointer;
+}
+
+.zocial.google::before {
+    content: '';
+    background: url('../img/g-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+
+.zocial.google span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+}

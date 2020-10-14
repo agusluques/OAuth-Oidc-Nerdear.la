@@ -1,0 +1,251 @@
+/* import cognizant softvision official font */
+
+@font-face {
+    font-family: Proxima Nova;
+    src: url(../fonts/ProximaNova-Regular.otf);
+}
+
+@font-face {
+    font-family: Proxima Nova Bold;
+    src: url(../fonts/ProximaNova-Bold.otf);
+    font-weight: bold;
+}
+
+/* body */
+
+body {
+    background-color: #f9fbfd;
+    background-image: url('../img/Dots.svg');
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-family: Proxima Nova;
+    margin: 0px;
+    font-size: 14px;
+}
+
+/* title banner size and colour */
+.sv-header {
+    width: 50%;
+    height: 20vh;
+    background-image: url('../img/head-sm-logo-2.svg');
+    background-position: 10%;
+    background-size: auto;
+    background-repeat: no-repeat;
+}
+
+.sv-header-wrapper {
+    display: none;
+}
+
+h1#kc-page-title {
+    font-size: 0px;
+    /* hide login text for now */
+}
+
+/* form */
+
+.sv-logo-container {
+    text-align: center;
+}
+
+.sv-logo {
+    margin: 0 auto;
+    height: auto;
+    max-width: 100%;
+}
+
+@media(min-width: 500px) {
+    /* hide logo on big screen */
+    .sv-logo-container {
+        display: none;
+    }
+}
+
+div#kc-content-wrapper {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: #f9fbfd;
+    height: 100%;
+    padding: 10%;
+    box-sizing: border-box;
+}
+
+@media(min-width: 500px) {
+    div#kc-content-wrapper {
+        width: 50%;
+        padding: 5%;
+    }
+}
+
+/* labels */
+
+label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #142c3d;
+    margin-bottom: 7px;
+}
+
+/* inputs */
+
+label[for="username"], label[for="password"] {
+    display: flex;
+    justify-content: space-between;
+}
+
+input[type=text], input[type=password] {
+    border: 1px solid #bfc1c2;
+    border-radius: 2px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 38px;
+    padding: 0 13px;
+    font-size: 14px;
+    font-weight: 400;
+    font-stretch: normal;
+    font-style: normal;
+    color: #142c3d;
+}
+
+.sv-form-element {
+    margin-bottom: 30px;
+}
+
+input.invalid {
+    border: 2px solid #c80000;
+    background: rgba(255, 0, 0, .05);
+}
+
+/* submit button*/
+
+input[type=submit] {
+    width: 100%;
+    height: 38px;
+    background-color: #404ef1;
+    color: #fff;
+    font-family: Proxima Nova Bold, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .1px;
+    border-radius: 4px;
+    border: none;
+}
+
+div#kc-form-buttons {
+    margin: 0px;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(40, 52, 147, 0.7);
+}
+
+/* form settings */
+
+.sv-form-settings {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+.sv-form-settings-link {
+    margin-bottom: 3px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* info */
+
+.sv-info-wrapper {
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #5c719a;
+    margin-bottom: 35px;
+}
+
+/* alerts */
+
+.alert {
+    font-size: 14px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: normal;
+    color: #5c719a;
+    margin-bottom: 35px;
+}
+
+.alert-error {
+    color: #ff2a2a;
+    background-color: rgba(255, 42, 42, .05);
+    padding: 3px 28px;
+    border-radius: 4px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* instructions */
+
+.instruction {
+    text-align: center;
+}
+
+/* social (google)*/
+
+div#kc-social-providers {
+    text-align: center;
+    margin-top: 5em;
+}
+
+div#kc-social-providers ul {
+    list-style: none;
+    padding: 0;
+}
+
+.zocial.google {
+    display: inline-block;
+    background: white;
+    color: #444;
+    width: 100%;
+    border-radius: 5px;
+    border: thin solid #888;
+    box-shadow: 1px 1px 1px grey;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.zocial.google:hover {
+    cursor: pointer;
+}
+
+.zocial.google::before {
+    content: '';
+    background: url('../img/g-normal.png') transparent 5px 50% no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+}
+
+.zocial.google span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+    text-shadow: none;
+}

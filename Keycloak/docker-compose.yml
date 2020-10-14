@@ -1,0 +1,21 @@
+version: '2.2'
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    environment:
+      - KEYCLOAK_USER=${KEYCLOAK_USER}
+      - KEYCLOAK_PASSWORD=${KEYCLOAK_PASSWORD}
+      - KEYCLOAK_IMPORT=${KEYCLOAK_IMPORT_PATH}${KEYCLOAK_IMPORT}
+    ports:
+      - ${KEYCLOAK_LOCAL_PORT}:8080
+    volumes:
+      - ./imports:${KEYCLOAK_IMPORT_PATH}
+      - ./standalone-ha.xml:/opt/jboss/keycloak/standalone/configuration/standalone-ha.xml
+      - ./themes/sv-theme:/opt/jboss/keycloak/themes/sv-theme
+      - ./themes/sv-right-theme:/opt/jboss/keycloak/themes/sv-right-theme
+      - ./themes/sv-gop-theme:/opt/jboss/keycloak/themes/sv-gop-theme
+      - ./themes/sv-recru-theme:/opt/jboss/keycloak/themes/sv-recru-theme
+      - ./themes/sv-skillmatrix-theme:/opt/jboss/keycloak/themes/sv-skillmatrix-theme
+      - ./themes/sv-cvc-theme:/opt/jboss/keycloak/themes/sv-cvc-theme
+    command: 
+      - "-b 0.0.0.0 -Dkeycloak.profile.feature.upload_scripts=enabled"
