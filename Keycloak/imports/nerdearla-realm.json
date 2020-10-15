@@ -1,6 +1,6 @@
 {
-  "id": "PW",
-  "realm": "PW",
+  "id": "Nerdearla",
+  "realm": "Nerdearla",
   "notBefore": 0,
   "revokeRefreshToken": false,
   "refreshTokenMaxReuse": 0,
@@ -44,7 +44,7 @@
         "description": "${role_uma_authorization}",
         "composite": false,
         "clientRole": false,
-        "containerId": "PW",
+        "containerId": "Nerdearla",
         "attributes": {}
       },
       {
@@ -53,7 +53,7 @@
         "description": "${role_offline-access}",
         "composite": false,
         "clientRole": false,
-        "containerId": "PW",
+        "containerId": "Nerdearla",
         "attributes": {}
       }
     ],
@@ -450,14 +450,14 @@
       "clientId": "account",
       "name": "${client_account}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/PW/account/",
+      "baseUrl": "/realms/Nerdearla/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/realms/PW/account/*"
+        "/realms/Nerdearla/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -493,14 +493,14 @@
       "clientId": "account-console",
       "name": "${client_account-console}",
       "rootUrl": "${authBaseUrl}",
-      "baseUrl": "/realms/PW/account/",
+      "baseUrl": "/realms/Nerdearla/account/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/realms/PW/account/*"
+        "/realms/Nerdearla/account/*"
       ],
       "webOrigins": [],
       "notBefore": 0,
@@ -755,14 +755,14 @@
       "clientId": "security-admin-console",
       "name": "${client_security-admin-console}",
       "rootUrl": "${authAdminUrl}",
-      "baseUrl": "/admin/PW/console/",
+      "baseUrl": "/admin/Nerdearla/console/",
       "surrogateAuthRequired": false,
       "enabled": true,
       "alwaysDisplayInConsole": false,
       "clientAuthenticatorType": "client-secret",
       "secret": "**********",
       "redirectUris": [
-        "/admin/PW/console/*"
+        "/admin/Nerdearla/console/*"
       ],
       "webOrigins": [
         "+"
