@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { OAuthService } from 'angular-oauth2-oidc';
+
 
 @Component({
   selector: 'app-nav-menu',
@@ -8,7 +8,7 @@ import { OAuthService } from 'angular-oauth2-oidc';
 })
 export class NavMenuComponent {
 
-  constructor(private oauthService: OAuthService) {
+  constructor() {
   }
 
   isExpanded = false;
@@ -20,25 +20,20 @@ export class NavMenuComponent {
   toggle() {
     this.isExpanded = !this.isExpanded;
   }
-  
+
   login() {
-    this.oauthService.initLoginFlow();
+    alert('login nav-menu');
   }
 
   logout() {
-    this.oauthService.logOut();
+    alert('logout nav-menu');
   }
 
   get identityClaims() {
-    return this.oauthService.getIdentityClaims();
-  } 
+    return false;
+  }
 
   get isAdmin() {
-    const claims = this.oauthService.getIdentityClaims();
-
-    if (!claims) {
-      return false;
-    }
-    return typeof claims['roles'] !== 'undefined' && claims['roles'].includes("admin");
+    return false;
   }
 }
