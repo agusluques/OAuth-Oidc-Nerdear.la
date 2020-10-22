@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 @Component({
   selector: 'app-home-component',
@@ -6,10 +7,10 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor() {
+  constructor(private oauthService: OAuthService) {
   }
 
   get identityClaims() {
-    return;
+    return this.oauthService.getIdentityClaims();
   }
 }

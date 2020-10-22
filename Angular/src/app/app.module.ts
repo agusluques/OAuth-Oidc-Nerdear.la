@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { AdminComponent } from './admin/admin.component';
 
+import { OAuthModule } from 'angular-oauth2-oidc';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { AdminComponent } from './admin/admin.component';
       { path: 'home', component: HomeComponent, pathMatch: 'full' },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: '**', redirectTo: 'home' }
-    ])
+    ]),
+    OAuthModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

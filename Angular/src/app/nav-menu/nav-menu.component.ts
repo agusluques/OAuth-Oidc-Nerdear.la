@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { OAuthService } from 'angular-oauth2-oidc';
 
 
 @Component({
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class NavMenuComponent {
 
-  constructor() {
+  constructor(private oauthService: OAuthService) {
   }
 
   isExpanded = false;
@@ -22,18 +23,23 @@ export class NavMenuComponent {
   }
 
   login() {
-    alert('login nav-menu');
+    this.oauthService.initLoginFlow();
   }
 
   logout() {
-    alert('logout nav-menu');
+    this.oauthService.logOut();
   }
 
   get identityClaims() {
-    return false;
+    return this.oauthService.getIdentityClaims();
   }
 
   get isAdmin() {
-    return false;
+    const claims = this.oauthService.getIdentityClaims();
+
+    if (!claims) {
+      return false;
+    }
+    return claims['roles'] && claims['roles'].includes('admin');
   }
 }
